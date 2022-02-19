@@ -12,9 +12,20 @@
 * ex: countThrees(47)
 * returns: 0
 */
+//figure out how to count the number of 3s
+//loop thru the numbers? it is a number, so we can't loop thru it
+//change the number to a string? can we loop thru a string? 
+//loop, with conditional, if 3 is included then we add to the count.
+function countThrees(n) {
+count = 0
+string = n.toString()
 
-function countThrees() {
-
+for(i = 0; i < string.length; i++){
+    if(string[i] === "3"){
+        count ++
+    }
+}
+return count
 }
 
 module.exports = countThrees

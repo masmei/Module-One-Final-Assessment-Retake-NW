@@ -9,8 +9,15 @@
 * ex: sumEvenNumbers([4, 3, 10])
 * returns: 14
 */
-function sumEvenNumbers() {
+function sumEvenNumbers(arr) {
 
+let even = 0;
+for(i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+        even += arr[i]
+    }
+}
+return even;
 }
 
 module.exports = sumEvenNumbers

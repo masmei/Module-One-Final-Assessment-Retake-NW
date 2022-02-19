@@ -10,9 +10,21 @@
 * ex: sortClassesBySize([ {subject: "C", studentCount: 47}, {subject: "B", studentCount: 1}, {subject: "A", studentCount: 88}]) 
 * returns: ["B", "C", "A"]
 */
+//we need to loop thry the array and also each object in the array. 
+//we can access the keys because they always the same.
+//we gotta find a way to sort the values in order.
+function sortClassesBySize(arr) {
+   
+    let sortedArray = arr.sort((subjectCount1, subjectCount2) => {
+        return subjectCount1.studentCount - subjectCount2.studentCount;});
 
-function sortClassesBySize() {
+    let sortedClasses = [];
 
+    for (let subject in sortedArray){
+        sortedClasses.push(sortedArray[subject].subject)
+    }
+
+    return sortedClasses;
 }
 
 module.exports = sortClassesBySize

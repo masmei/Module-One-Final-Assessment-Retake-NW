@@ -10,9 +10,19 @@
 * ex: removeStringsEndingInBang(["!", "", "a"])
 * returns: ["", "a"]
 */
+//return an array with anything but string that ends with "!"
+//loop thru array and check if the last char of the string is "!"
+//if above is false then push string into empty array.
+function removeStringsEndingInBang(arr) {
 
-function removeStringsEndingInBang() {
+result = [];
 
+for(let i = 0; i < arr.length; i++){
+    if(arr[i].charAt(arr[i].length-1) != "!"){
+        result.push(arr[i])
+    }
+}
+return result
 }
 
 module.exports = removeStringsEndingInBang
